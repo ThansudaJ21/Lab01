@@ -11,13 +11,13 @@ const app = Vue.createApp({
             inStock: true,
             inventory: 10,
             onSale: false,
-            // details: ['50% cotton', '30% wool', '20% polyester'],
-            // variants: [
-            //     { id: 2234, color: 'green', image: './assets/images/socks_green.jpg' },
-            //     { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg' }
-            // ],
+            details: ['50% cotton', '30% wool', '20% polyester'],
+            variants: [
+                { id: 2234, color: 'green', image: './assets/images/socks_green.jpg' },
+                { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg' }
+            ],
             // cart: 0,
-            // sizes: ['S ', 'M ', 'L ']
+            sizes: ['S ', 'M ', 'L ']
         }
     },
     // methods: {
