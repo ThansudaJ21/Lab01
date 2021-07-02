@@ -12,16 +12,16 @@
 
 <body>
     <div id="app">
-        <!-- <div class="nav-bar"> </div>
-        <div class="cart">Cart {{cart}}</div>
-        <div class="cart">Stock {{inventory}}</div>
+        <div class="nav-bar"> </div>
+        <!-- <div class="cart">Cart {{cart}}</div>
+        <div class="cart">Stock {{inventory}}</div> -->
         <div class="prodcut-display">
             <div class="product-container">
                 <div class="product-image">
                     <img :src="image">
                 </div>
-                <div class="product-info"> :href="url"-->
-                    <h1 >{{product}}</h1>
+                <div class="product-info">
+                    <a  :href="url">{{product}}</a>
                     <p>{{desc}}</p>
                     <!-- <p v-if="inventory <= 10 && inventory > 0">In stock</p>
                     <p v-else>Out of stock</p>
@@ -40,12 +40,12 @@
                         </ul>
                     </div>
                     <button class="button" @click="addToCart">Add to Cart</button>
-                    <button class="button" @click="deduct">Deduct</button>
+                    <button class="button" @click="deduct">Deduct</button> -->
 
-                </div> -->
-            <!-- </div>
+                </div>
+             </div>
         </div>
-    </div> -->
+    </div>
 
     <!-- Import Js -->
     <script src="./main.js"></script>
