@@ -5,8 +5,8 @@ const app = Vue.createApp({
     data() {
         return {
             product: 'Boots',
-             image: './assets/images/socks_green.jpg',
-             url: 'https://www.camt.cmu.ac.th/index.php/th/',
+            image: './assets/images/socks_green.jpg',
+            url: 'https://www.camt.cmu.ac.th/index.php/th/',
             desc: 'This is a boots',
             inStock: true,
             inventory: 10,
@@ -16,20 +16,30 @@ const app = Vue.createApp({
                 { id: 2234, color: 'green', image: './assets/images/socks_green.jpg' },
                 { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg' }
             ],
-            // cart: 0,
+            cart: 0,
             sizes: ['S ', 'M ', 'L ']
         }
     },
-    // methods: {
-    //     addToCart() {
-    //     this.cart += 1
-    //     this.inventory -= 1
-    //     },
-    //     updateImage(variantImage) {
-    //         this.image = variantImage
-    //     },
-    //     deduct() {
-    //         this.inventory -= 1
-    //     }
-    // }
+    methods: {
+        addToCart() {
+
+            if (this.inventory > 0) {
+                 this.cart += 1
+                this.inventory -= 1
+            } else {
+                this.inventory = 0
+            }
+        },
+        updateImage(variantImage) {
+            this.image = variantImage
+        },
+        deduct() {
+            if (this.cart > 0) {
+                this.cart -= 1
+               this.inventory += 1
+           } else {
+               this.cart = 0
+           }
+        }
+    }
 })

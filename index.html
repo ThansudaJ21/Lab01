@@ -13,40 +13,40 @@
 <body>
     <div id="app">
         <div class="nav-bar"> </div>
-        <!-- <div class="cart">Cart {{cart}}</div>
-        <div class="cart">Stock {{inventory}}</div> -->
+        <div class="cart">Cart {{cart}}</div>
+        <div class="cart">Stock {{inventory}}</div>
         <div class="prodcut-display">
             <div class="product-container">
                 <div class="product-image">
                     <img :src="image">
                 </div>
                 <div class="product-info">
-                    <a  :href="url">{{product}}</a>
+                    <a :href="url">{{product}}</a>
                     <p>{{desc}}</p>
-                     <p v-if="inventory <= 10 && inventory > 0">In stock</p>
+                    <p v-if="inventory <= 10 && inventory > 0">In stock</p>
                     <p v-else>Out of stock</p>
 
                     <p v-if="onSale">on Sale</p>
                     <p v-else>Not sale</p>
 
-                  <ul>
+                    <ul>
                         <li v-for="detail in details">{{detail}}</li>
                     </ul>
                     <div v-for="variant in variants" :key="variant.id" @mouseover="updateImage(variant.image)">
                         {{variant.color}} </div>
 
-                   <div class="size">
+                    <div class="size">
                         <ul>
                             <li v-for="size in sizes">
                                 {{size}}
                             </li>
                         </ul>
                     </div>
-                    <!--   <button class="button" @click="addToCart">Add to Cart</button>
-                    <button class="button" @click="deduct">Deduct</button> -->
+                    <button class="button" @click="addToCart">Add to Cart</button>
+                    <button class="button" @click="deduct">Deduct</button>
 
                 </div>
-             </div>
+            </div>
         </div>
     </div>
 
