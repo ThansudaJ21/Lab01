@@ -7,10 +7,10 @@ const app = Vue.createApp({
             product: 'Boots',
              image: './assets/images/socks_green.jpg',
              url: 'https://www.camt.cmu.ac.th/index.php/th/',
-            desc: 'This is a boots'
-            // inStock: true,
-            // inventory: 10,
-            // onSale: false,
+            desc: 'This is a boots',
+            inStock: true,
+            inventory: 10,
+            onSale: false,
             // details: ['50% cotton', '30% wool', '20% polyester'],
             // variants: [
             //     { id: 2234, color: 'green', image: './assets/images/socks_green.jpg' },
